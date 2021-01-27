@@ -1,10 +1,9 @@
-\ primitives and native-code routines on AMD64
+\ AMD64-specific native-code generation routines on AMD64
 
-\ register usage:
+: !branch ( addr1 addr2 -- )
+    \ let branch ending at addr2 jump to addr1; AMD64 branches end
+    \ with 4-byte relative addresses.
+    dup >r - r> 4 - l! ;
 
-\ rp  = rsp  return stack pointer
-\ sp  = rbx  data stack pointer
-\ tos = rax  top-of-stack
-\ wa  = rsi  word address, contains xt when EXECUTEing a doer
-\ temporary: rcx rdx rdi
-\ unused: r8-r15; so porting to IA-32 should be easy
+: literal ( x -- )
+    ]] lit [[ chere cell- ! ;
