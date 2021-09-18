@@ -137,6 +137,8 @@ drop
     latest >cfa ! ;
 
 variable last \ contains address of most recently defined word
+variable current \ 
+
 
 : latest ( -- nt )
     last @ ;
