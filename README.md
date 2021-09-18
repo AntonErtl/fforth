@@ -51,4 +51,5 @@ Marcel Hendrix called his first system FForth
 [<67916db8-89d5-415f-8b77-d453536ca393n@googlegroups.com>](http://al.howardknight.net/?ID=163195341400);
 and David Given has published [fforth](http://cowlark.com/fforth/).
 You can differentiate Fforth from FForth and fforth by the
-capitalization.
+capitalization (in prose; on case-sensitive file systems directories
+and executables are called 'fforth').
